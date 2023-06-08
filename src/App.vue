@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <h1>APP1</h1>
+    <h1>APP</h1>
   </div>
 </template>
 
