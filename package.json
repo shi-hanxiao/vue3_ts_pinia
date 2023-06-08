@@ -10,7 +10,8 @@
     "lint": "eslint src",
     "fix": "eslint src --fix",
     "prepare": "husky install",
-    "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\""
+    "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
+    "commitlint": "commitlint --config commitlint.config.cjs -e -V"
   },
   "dependencies": {
     "vue": "^3.2.47"
