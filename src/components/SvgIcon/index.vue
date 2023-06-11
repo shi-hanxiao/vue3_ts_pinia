@@ -17,7 +17,7 @@ defineProps({
   },
   //提供使用的图标名字
   name: String,
-  //接受父组件传递颜色
+  //接受父组件传递颜色.
   color: {
     type: String,
     default: "",
