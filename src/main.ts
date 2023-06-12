@@ -11,16 +11,17 @@ import zhCn from "element-plus/dist/locale/zh-cn.mjs";
 import "virtual:svg-icons-register";
 // 引入自定义插件对象：注册整个项目全局组件
 import globalComponent from "@/components/index";
-import request from "@/utils/request";
+//引入路由
+import router from "./router";
+//引入仓库
+import pinia from "./store";
 const app = createApp(App);
 app.use(ElementPlus, {
   locale: zhCn,
 });
 app.use(globalComponent);
+//安装仓库
+app.use(pinia);
+//注册模板路由
+app.use(router);
 app.mount("#app");
-
-request({
-  url: "/user/login",
-  method: "post",
-  data: { username: "admin", password: "111111" },
-});
