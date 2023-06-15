@@ -25,12 +25,12 @@
         <!-- table-column:默认展示数据用div -->
         <el-table-column label="品牌名称" prop="tmName"></el-table-column>
         <el-table-column label="品牌LOGO">
-          <template #="{ row, $index }">
+          <template #default="{ row }">
             <img :src="row.logoUrl" style="width: 100px; height: 100px" />
           </template>
         </el-table-column>
         <el-table-column label="品牌操作">
-          <template #="{ row, $index }">
+          <template #default="{ row }">
             <el-button
               type="primary"
               size="small"
@@ -129,7 +129,7 @@
 </template>
 
 <script setup lang="ts">
-import { ElMessage, UploadProps, formEmits } from "element-plus";
+import { ElMessage, UploadProps } from "element-plus";
 //引入组合式API函数ref
 import { ref, onMounted, reactive, nextTick } from "vue";
 import {
@@ -278,10 +278,7 @@ const beforeAvatarUpload: UploadProps["beforeUpload"] = (rawFile) => {
   }
 };
 //图片上传成功钩子
-const handleAvatarSuccess: UploadProps["onSuccess"] = (
-  response,
-  uploadFile,
-) => {
+const handleAvatarSuccess: UploadProps["onSuccess"] = (response) => {
   //response:即为当前这次上传图片post请求服务器返回的数据
   //收集上传图片的地址,添加一个新的品牌的时候带给服务器
   trademarkParams.logoUrl = response.data;
