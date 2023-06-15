@@ -30,7 +30,6 @@ export interface RoleResponseData extends ResponseData {
     pages: number;
   };
 }
-
 //菜单与按钮数据的ts类型
 export interface MunuData {
   id: number;

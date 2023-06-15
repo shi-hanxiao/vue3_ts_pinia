@@ -15,7 +15,7 @@
           active-text-color="yellowgreen"
         >
           <!--根据路由动态生成菜单-->
-          <Menu1 :menuList="userStore.menuRoutes"></Menu1>
+          <Menu :menuList="userStore.menuRoutes"></Menu>
         </el-menu>
       </el-scrollbar>
     </div>
@@ -43,7 +43,7 @@ import { useRoute } from "vue-router";
 //引入左侧菜单logo子组件
 import Logo from "./logo/index.vue";
 //引入菜单组件
-import Menu1 from "./menu/index.vue";
+import Menu from "./menu/index.vue";
 //右侧内容展示区域
 import Main from "./main/index.vue";
 //引入顶部tabbar组件

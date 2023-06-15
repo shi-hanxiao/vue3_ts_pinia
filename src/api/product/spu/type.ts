@@ -28,7 +28,6 @@ export interface HasSpuResponseData extends ResponseData {
     pages: number;
   };
 }
-
 //品牌数据的TS类型
 export interface Trademark {
   id: number;
@@ -55,7 +54,6 @@ export interface SpuImg {
 export interface SpuHasImg extends ResponseData {
   data: SpuImg[];
 }
-
 //已有的销售属性值对象ts类型
 export interface SaleAttrValue {
   id?: number;
@@ -118,7 +116,6 @@ export interface SkuData {
   skuSaleAttrValueList?: saleArr[];
   skuDefaultImg: string; //sku图片地址
 }
-
 //获取SKU数据接口的ts类型
 export interface SkuInfoData extends ResponseData {
   data: SkuData[];

@@ -33,6 +33,7 @@ export default {
   name: "Main1",
 };
 </script>
+
 <style scoped>
 .fade-enter-from {
   opacity: 0;

@@ -55,13 +55,13 @@ const useUserStore = defineStore("User", {
       if (result.code == 200) {
         //pinia仓库存储一下token
         //由于pinia|vuex存储数据其实利用js对象
-        this.token = result.data.token as string;
+        this.token = result.data as string;
         //本地存储持久化存储一份
         SET_TOKEN(result.data as string);
         //能保证当前async函数返回一个成功的promise
         return "ok";
       } else {
-        return Promise.reject(new Error(result.data.message));
+        return Promise.reject(new Error(result.data));
       }
     },
     //获取用户信息方法
