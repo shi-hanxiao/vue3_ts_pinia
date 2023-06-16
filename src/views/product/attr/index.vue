@@ -26,10 +26,10 @@
             prop="attrName"
           ></el-table-column>
           <el-table-column label="属性值名称">
-            <template #="{ row, $index }">
+            <template #default="{ row }">
               <el-tag
                 style="margin: 5px"
-                v-for="(item, index) in row.attrValueList"
+                v-for="item in row.attrValueList"
                 :key="item.id"
               >
                 {{ item.valueName }}
@@ -38,7 +38,7 @@
           </el-table-column>
           <el-table-column label="操作" width="120px">
             <!-- row：已有的属性对象 -->
-            <template #="{ row, $index }">
+            <template #default="{ row }">
               <!-- 修改已有属性的按钮 -->
               <el-button
                 type="primary"
@@ -98,7 +98,7 @@
           ></el-table-column>
           <el-table-column label="属性值名称">
             <!-- row:即为当前属性值对象 -->
-            <template #="{ row, $index }">
+            <template #default="{ row, $index }">
               <el-input
                 :ref="(vc: any) => inputArr[$index] = vc"
                 v-if="row.flag"
@@ -111,7 +111,8 @@
             </template>
           </el-table-column>
           <el-table-column label="属性值操作">
-            <template #="{ row, index }">
+            <!-- eslint-disable-next-line -->
+            <template #default="{ row, index }">
               <el-button
                 type="primary"
                 size="small"
