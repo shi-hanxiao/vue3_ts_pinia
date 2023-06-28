@@ -38,3 +38,4 @@ import { isHasButton } from "@/directive/has";
 isHasButton(app);
 //将应用挂载到挂载点上
 app.mount("#app");
+//test
